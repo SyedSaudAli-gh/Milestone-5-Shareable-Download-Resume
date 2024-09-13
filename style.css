@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(100, 200, 255);
+    color: #333;
+    line-height: 1.9;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 18px;
+    background-color: rgb(100, 200, 255);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+}
+section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #e0f5fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+label, input, select, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="radio"], label[for="male"], label[for="female"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+#uploadPhoto{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#submit{
+    background-color: #4f44e7;
+    color: white;
+    font-size: large;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="date"], select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+small {
+    display: block;
+    margin-bottom: 10px;
+}
+
+img {
+    border-radius: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    label, input, select {
+        display: inline-block;
+        width: 48%;
+    }
+
+    input[type="radio"] {
+        width: auto;
+    }
+    
+    button {
+        width: 48%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
