@@ -6,46 +6,79 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(100, 200, 255);
-    color: #333;
+    color: rgb(0, 0, 0);
     line-height: 1.9;
+    font-family: 'Arial', sans-serif;
     padding: 20px;
+    background-image: url("Background-img.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.fmrb{
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .fmrb {
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .fmrb {
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1201px) {
+    .fmrb {
+        text-align: center;
+        max-width: 100%;
+    }
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 18px;
     background-color: rgb(100, 200, 255);
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 100px rgba(0, 0, 0, 0.9);
 }
 .header {
+    color:#222;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
     border-bottom: 2px solid #ccc;
 }
+.resumeForm{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
 section {
+    color:#000;
     margin: 20px 0;
     padding: 15px;
     background-color: #e0f5fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
     font-size: 2rem;
 }
 
-form {
-    width: 100%;
-    margin-top: 20px;
-}
-
 fieldset {
-    border: 2px solid #ccc;
     padding: 10px;
     margin-bottom: 20px;
 }
@@ -55,29 +88,46 @@ legend {
     font-weight: bold;
 }
 
-label, input, select, button {
+label,input, select {
+    color:#000;
     display: block;
-    width: 100%;
+    margin-bottom: 5px;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+
+.button {
+    display: block;
     margin-bottom: 10px;
-}
-
-input[type="radio"], label[for="male"], label[for="female"] {
-    display: inline-block;
-    width: auto;
-    margin-right: 10px;
-}
-
-button {
+    font-size: small;
+    font-family: cursive;
+    margin-right: auto;
+    margin-left: auto;
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
+    padding: 10px ;
     border-radius: 10px;
-    cursor: pointer;
+    
 }
 
-button:hover {
-    background-color: #45a049;
+.button:hover {
+    color:#000;
+    transition: 0.5s;
+    background-color: royalblue;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
 }
+@keyframes shake {
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
 #uploadPhoto{
     background-color: #4CAF50;
     color: white;
@@ -86,25 +136,27 @@ button:hover {
     height: 100px;
     border-radius: 50%;
 }
-#submit{
+
+.submit-button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #4f44e7;
     color: white;
     font-size: large;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
 }
+.submit-button:hover{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transform: translateX(10px);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-image: linear-gradient(to right, #000 , rgba(109, 109, 68, 0.625));
+    transition: 1s;
+    opacity: 0.7;
 
-input[type="text"], input[type="email"], input[type="number"], input[type="date"], select {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
-small {
-    display: block;
-    margin-bottom: 10px;
-}
 
 img {
     border-radius: 100%;
@@ -112,33 +164,173 @@ img {
     height: auto;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+
+#skillsList{
+    list-style: none;
 }
 
+footer{
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+.follow{
+    display: flex;
+    justify-content: center;
+}
+.follow:hover{
+    transition: 0.5s;
+    width: auto;
+    transform: scale(1.2)
+}
 @media (min-width: 768px) {
     .container {
-        grid-template-columns: 1fr 1fr;
+      width: 100%;
     }
-
-    label, input, select {
-        display: inline-block;
-        width: 48%;
+    .header{
+        width: 85%;
     }
-
-    input[type="radio"] {
-        width: auto;
+    section{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 12px;
+        border: 2px solid #000;
+        border-radius: 5px;
+    }
+    form{
+        width: 100%;
+    }
+    label, select legend fieldset {
+       width: 85%;
+    }
+    input{
+        width: 100%;
+        border: 2px solid #4CAF50;
+        border-radius: 5px;
+    }
+    .about{
+        padding: 12px;
+        border: 2px solid #4CAF50;
+        border-radius: 5px;
+        resize: vertical;
+        font-size: 16px;
+        font-family: 'Arial', sans-serif;
+        width: 80%;
+        max-width: 600px;
+        line-height: 1.5;
+        box-sizing: border-box;
     }
     
     button {
-        width: 48%;
+        width: 20%;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 480px) {
     .container {
-        grid-template-columns: 1fr;
+        width: 100%;
+      }
+      .header{
+          width: 85%;
+      }
+      section{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+          width: 85%;
+          padding: 12px;
+          border: 2px solid #000;
+          border-radius: 5px;
+      }
+      form{
+          width: 100%;
+          margin-right: auto;
+          margin-left: auto;
+      }
+      label, select legend fieldset {
+         width: 85%;
+      }
+      input{
+          padding: 12px;
+          border: 2px solid #4CAF50;
+          border-radius: 5px;
+      }
+      .about{
+          padding: 12px;
+          border: 2px solid #4CAF50;
+          border-radius: 5px;
+          resize: vertical;
+          font-size: 16px;
+          font-family: 'Arial', sans-serif;
+          width: 80%;
+          max-width: 600px;
+          line-height: 1.5;
+          box-sizing: border-box;
+      }
+      
+      button {
+          width: 20%;
+      }
+      .submit-button{
+        margin-right: auto;
+        margin-left: auto;
     }
-}
+  }
+
+  @media (min-width: 320px) {
+    .container {
+        width: 100%;
+      }
+      .header{
+          width: auto;
+          margin-right: auto;
+          margin-left: auto;
+      }
+      section{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+          width: 85%;
+          padding: 12px;
+          border: 2px solid #000;
+          border-radius: 5px;
+      }
+      form{
+          width: auto;
+          margin-right: auto;
+          margin-left: auto;
+      }
+      label, select legend fieldset {
+         width: 85%;
+      }
+      input{
+          width: 100%;
+          border: 2px solid #4CAF50;
+          border-radius: 5px;
+      }
+      .about{
+          padding: 12px;
+          border: 2px solid #4CAF50;
+          border-radius: 5px;
+          resize: vertical;
+          font-size: 16px;
+          font-family: 'Arial', sans-serif;
+          width: 80%;
+          max-width: 600px;
+          line-height: 1.5;
+          box-sizing: border-box;
+      }
+      
+      button {
+        font-size: 10px;
+        padding: 3px;
+          width: 30%;
+      }
+      .submit-button{
+        font-size: smaller;
+        margin-right: auto;
+        margin-left: auto;
+    }
+  }
+
